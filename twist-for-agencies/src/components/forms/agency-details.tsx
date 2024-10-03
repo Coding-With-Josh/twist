@@ -195,7 +195,7 @@ const AgencyDetails = ({ data }: Props) => {
 
   return (
     <AlertDialog>
-      <Card className="w-full">
+      <Card className="w-full py-4 px-5">
         <CardHeader>
           <CardTitle>Agency Information</CardTitle>
           <CardDescription>
