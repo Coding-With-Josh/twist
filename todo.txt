@@ -1,0 +1,14 @@
+Twist only landing page done
+twist agencies stopped at the upload problem
+
+10//5/2024 --- 2:40 PM
+About to start Twist 
+and blog
+
+ignore errors on vercel?
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
