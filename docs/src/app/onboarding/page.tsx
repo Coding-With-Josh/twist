@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { ChevronLeft, ChevronLeftCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const OnboardingForm = () => {
@@ -12,7 +13,9 @@ const OnboardingForm = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const details = [email, password, name];
+  const router = useRouter();
 
+  
   return (
     <div className="text-foreground absolute top-0 z-[-2] h-screen w-screen flex items-center flex-col space-y-[2rem] justify-center bg-background">
       <ModeToggle className="text-foreground/80 absolute top-[2rem] left-[2rem]" />
@@ -52,7 +55,14 @@ const OnboardingForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button onClick={() => setStep(step - 1)}>Back</Button>
-          <Button onClick={() => console.log(details)}>Submit</Button>
+          <Button
+            onClick={() => {
+              console.log(details);
+              router.push("/[name]");
+            }}
+          >
+            Submit
+          </Button>
         </div>
       )}
     </div>

@@ -1,15 +1,12 @@
-import credentials from "next-auth/providers/credentials";
-import { signIn } from "./auth";
+import { useClerk } from "@clerk/nextjs";
 
+type data = {
+  email: string
+  password: string
+}
 
 export const SignInWithEmailAndPassword = async (FormData: string[]) => {
 
-  await signIn("credentials", FormData)
+
   
-};
-export const SignInWithGoogle = async (formData: FormData) => {
-  await signIn("google");
-};
-export const SignInWithGithub = async (formData: FormData) => {
-  await signIn("github");
 };

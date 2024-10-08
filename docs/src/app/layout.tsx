@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Nunito_Sans, Poppins } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import NextTopLoader from "nextjs-toploader";
 import { ThemeProvider } from "next-themes";
 
-const font = Poppins({
+const font = Nunito_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
