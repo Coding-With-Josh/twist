@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes"
+import { ThemeProvider } from "next-themes";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { db } from "@/lib/db";
@@ -7,7 +7,6 @@ import { db } from "@/lib/db";
 const font = Nunito_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
-
 });
 export const metadata: Metadata = {
   title: "Engage by Twist",
@@ -19,18 +18,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const user = await db.user.findMany
+  const user = await db.user.findMany;
   return (
     <html lang="en">
-      <body
-        className={font.className}
-      ><ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-        {children}
+      <body className={font.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
       </body>
     </html>
