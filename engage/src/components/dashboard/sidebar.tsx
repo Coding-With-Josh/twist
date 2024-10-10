@@ -94,7 +94,7 @@ export const Sidebar = () => {
       </div>
 
       <div>
-        <aside className="fixed inset-y-0 left-0 z-10 hidden w-16 flex-col border-r bg-background sm:flex">
+        <aside className="fixed inset-y-0 left-4 z-10 hidden lg:hidden md:flex md:w-16 w-32 border-r md:pr-4 flex-col sm:flex">
           <nav className="flex flex-col items-center gap-4 px-2 py-4">
             <Link
               href="/"
@@ -103,7 +103,7 @@ export const Sidebar = () => {
               <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
               <span className="sr-only">Engage</span>
             </Link>
-            <div className="flex flex-col items-center justify-center gap-4 mt-6">
+            <div className="flex flex-col items-center justify-center gap-4 mt-[7rem] xl:mt-[10.7rem] rounded-lg w-full px-2 py-2 bg-background/20 backdrop-blur-md">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -176,13 +176,116 @@ export const Sidebar = () => {
               </TooltipProvider>
             </div>
           </nav>
-          <nav className="mt-auto flex flex-col items-center gap-4 px-2 py-4">
+          <nav className="mt-auto flex flex-col items-center gap-4 px-2 py-4 rounded-lg w-full bg-background/20 backdrop-blur-md">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
                     href="/dashboard/settings"
                     className={`${colorUrlBig} flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  >
+                    <Settings className="h-5 w-5" />
+                    <span className="sr-only">Settings</span>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="right">Settings</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <ModeToggle />
+          </nav>
+        </aside>
+      </div>
+
+      <div>
+        <aside className="fixed inset-y-0 left-4 z-10 hidden md:hidden lg:hidden md:w-16 w-32 border-r md:pr-4 flex-col sm:flex">
+          <nav className="flex flex-col items-center gap-4 px-2 py-4">
+            <Link
+              href="/"
+              className="group flex min-h-fit min-w-fit shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+            >
+              <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
+              <span className="">Engage</span>
+            </Link>
+            <div className="flex flex-col items-center justify-center gap-4 mt-[7rem] xl:mt-[10.7rem] rounded-lg w-full px-2 py-2 bg-background/20 backdrop-blur-md">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/dashboard"
+                      className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                    >
+                      <Home className="h-5 w-5" />
+                      <span className="sr-only">Home</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">Home</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/dashboard/discover"
+                      className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                    >
+                      <Search className="h-5 w-5" />
+                      <span className="sr-only">Discover</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">Discover</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/dashboard/marketplace"
+                      className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                    >
+                      <ShoppingCart className="h-5 w-5" />
+                      <span className="sr-only">Marketplace</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">Marketplace</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/dashboard/monetization"
+                      className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                    >
+                      <DollarSign className="h-5 w-5" />
+                      <span className="sr-only">Monetization</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">Monetization</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/dashboard/analytics"
+                      className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
+                    >
+                      <LineChart className="h-5 w-5" />
+                      <span className="sr-only">Analytics</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">Analytics</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          </nav>
+          <nav className="mt-auto flex flex-col items-center gap-4 px-2 py-4 rounded-lg w-full bg-background/20 backdrop-blur-md">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href="/dashboard/settings"
+                    className={`${colorUrlBig} flex min-h-fit min-w-fit items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8`}
                   >
                     <Settings className="h-5 w-5" />
                     <span className="sr-only">Settings</span>

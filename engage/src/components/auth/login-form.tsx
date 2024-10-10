@@ -24,6 +24,8 @@ import {
   FormMessage,
 } from "../ui/form";
 import { ModeToggle } from "../ui/mode-toggle";
+import { FormError } from "./form-error";
+import { FormSuccess } from "./form-success";
 
 export function LoginForm() {
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -79,7 +81,7 @@ export function LoginForm() {
                   name="password"
                   render={({ field }) => (
                     <>
-                      <div className="grid gap-2">
+                      <div className="grid gap-2 mb-4">
                         <FormItem>
                           <FormLabel>Password</FormLabel>
                           <FormControl>
@@ -100,6 +102,8 @@ export function LoginForm() {
                   )}
                 />
               </div>
+              <FormError message="Something went wrong"/>
+              <FormSuccess message="Email successful"/>
               <Button type="submit" className="w-full my-3">
                 Create an account
               </Button>
