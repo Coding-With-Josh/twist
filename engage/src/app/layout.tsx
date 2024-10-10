@@ -4,6 +4,7 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { db } from "@/lib/db";
 
+
 const font = Nunito_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
