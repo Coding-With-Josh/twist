@@ -38,3 +38,12 @@ export function ModeToggle() {
     </DropdownMenu>
   )
 }
+export function ModeToggleIcon() {
+  const { theme, setTheme } = useTheme()
+
+  return (
+    <div>
+      {theme === "light" ? (<SunIcon className="h-5 w-5" onClick={()=>setTheme("dark")}/>) : <MoonIcon className="h-5 w-5" onClick={()=>setTheme("light")}/>}
+    </div>
+  )
+}

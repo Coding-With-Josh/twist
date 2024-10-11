@@ -3,7 +3,7 @@ import React from 'react'
 
 const Marketplace = () => {
   return (
-    <div><Sidebar/>Marketplace</div>
+    <div>Marketplace</div>
   )
 }
 

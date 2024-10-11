@@ -3,7 +3,7 @@ import React from 'react'
 
 const Analytics = () => {
   return (
-    <div><Sidebar/>Analytics</div>
+    <div>Analytics</div>
   )
 }
 

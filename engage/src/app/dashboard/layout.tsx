@@ -1,9 +1,11 @@
 import React, { ReactNode } from "react";
-import { Nunito_Sans } from "next/font/google";
 
-const font = Nunito_Sans({
-  weight: ["400", "700"],
-  subsets: ["latin"],
+import localFont from "next/font/local";
+import { Sidebar } from "@/components/dashboard/sidebar";
+
+const nunitoSans = localFont({
+  src: "../fonts/NunitoSans_10pt-Regular.ttf",
+  variable: "--font-geist-sans",
 
 });
 
@@ -12,7 +14,9 @@ const DashboardLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  return <div className={font.className}>{children}</div>;
+  return <div className={`${nunitoSans.className} flex items-center justify-center w-screen h-screen gap-[2rem]`}>
+    <Sidebar/>
+    {children}</div>;
 };
 
 export default DashboardLayout;
