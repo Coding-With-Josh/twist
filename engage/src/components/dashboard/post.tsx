@@ -2,11 +2,12 @@
 
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
-import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu"
+import { DropdownMenu, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { DotsVerticalIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { Bookmark, Heart, LucideCircleChevronLeft, MessageCircle, MessageCircleDashed, X } from "lucide-react"
 import { Separator } from "../ui/separator"
+import { DropdownMenuContent } from "@radix-ui/react-dropdown-menu"
 
 export const Post = () => {
     const [ispopoverVisible, setIsPopoverVisible] = useState(false)
@@ -44,6 +45,17 @@ export const Post = () => {
                         </div>
                         <DropdownMenu>
                             <DropdownMenuTrigger><DotsVerticalIcon /></DropdownMenuTrigger>
+                            <DropdownMenuContent className="bg-card/60 backdrop-blur-md p-3 rounded-md border">
+                                <DropdownMenuItem>
+                                    Follow
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    Repost
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    Quote
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
                         </DropdownMenu>
                     </CardTitle>
                 </CardHeader>

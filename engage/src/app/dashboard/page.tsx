@@ -8,12 +8,14 @@ import { Post } from "@/components/dashboard/post";
 const Page = () => {
   return (
     <div className="w-screen h-screen px-7">
-      <Sidebar />
-      <div className="lg:flex flex-col items-center justify-center gap-4 mt-7 w-full">
+      <Sidebar pathname="/dashboard" />
+      <div className="lg:flex xl:flex flex flex-col items-center justify-center gap-4 mt-7 w-full">
         <div className="flex flex-col h-full items-center justify-center gap-4">
 
-        <MakeAPost />
-        <Post/>
+          <MakeAPost />
+          <Post />
+          <Post />
+          <Post />
         </div>
         <Suggestions />
       </div>

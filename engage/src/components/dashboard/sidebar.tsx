@@ -31,10 +31,10 @@ import {
 import { ModeToggle, ModeToggleIcon } from "../ui/mode-toggle";
 import { usePathname } from "next/navigation";
 
-export const Sidebar = () => {
+export const Sidebar = ({pathname}: any) => {
   // const router = useRouter(); // Get the router instance
   // const currentPath = router.pathname;
-  const pathname = usePathname(); // Get the current path
+  // const pathname = usePathname(); // Get the current path
 
   // Define a function to determine the icon color based on the current path
   const colorUrlBig = () => {
