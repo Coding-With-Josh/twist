@@ -6,9 +6,10 @@ import { Suggestions } from "@/components/dashboard/suggestions";
 
 const Page = () => {
   return (
-    <div className="flex items-start justify-between gap-[2rem] pr-4">
-     <MakeAPost/>
-     <Suggestions/>
+    <div className="px-7 grid grid-cols-2 gap-2">
+      <Sidebar />
+      <MakeAPost />
+      <Suggestions />
     </div>
   );
 };

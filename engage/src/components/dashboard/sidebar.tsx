@@ -64,9 +64,9 @@ export const Sidebar = () => {
   return (
     <>
       <div>
-        <div className="fixed backdrop-blur-sm bottom-0 z-10 min-h-fit py-1 lg:hidden md:hidden w-screen flex-col border-t bg-background/80">
+        <div className="fixed backdrop-blur-md bottom-0 z-10 min-h-fit py-1 lg:hidden md:hidden w-screen flex-col border-t bg-background/80">
           <div className="flex items-center px-2 py-4 w-full h-full">
-            <div className="flex items-center justify-center space-x-5 text-lg font-medium w-full">
+            <div className="flex items-center justify-center space-x-5 text-lg font-medium w-full h-full">
               <Link
                 href="/dashboard"
                 className={`${colorUrlSmall} flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground`}
@@ -109,7 +109,7 @@ export const Sidebar = () => {
       </div>
 
       <div>
-        <aside className="fixed inset-y-0 left-4 z-10 hidden lg:hidden md:flex md:w-16 w-32 border-r md:pr-4 flex-col sm:flex">
+        <aside className="fixed inset-y-0 left-4 hidden lg:hidden md:flex md:w-16 w-32 border-r md:pr-4 flex-col sm:flex">
           <nav className="flex flex-col items-center gap-4 px-2 py-4">
             <Link
               href="/"
@@ -212,7 +212,7 @@ export const Sidebar = () => {
       </div>
 
       <div>
-        <aside className="fixed inset-y-0 left-4 z-10 hidden md:hidden lg:flex md:w-16 min-w-fit border-r flex-col sm:flex">
+        <aside className="fixed inset-y-0 left-6 hidden md:hidden lg:flex md:w-16 min-w-fit border-r flex-col sm:flex">
           <nav className="flex flex-col items-start gap-4 py-4 pl-2 pr-[3.2rem] pt-[1.7rem]">
             <div className="w-full flex items-center justify-start gap-[1rem]">
               <Link
@@ -223,7 +223,7 @@ export const Sidebar = () => {
               </Link>
               <span className="">Engage</span>
             </div>
-            <div className="flex flex-col items-start justify-center gap-4 mt-[2.5rem] xl:mt-[3.2rem] rounded-lg w-full bg-background/20 backdrop-blur-md">
+            <div className="flex flex-col items-start justify-center gap-4 mt-[2.5rem] xl:mt-[3.2rem] rounded-lg w-full">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 
 import localFont from "next/font/local";
 import { Sidebar } from "@/components/dashboard/sidebar";
+import { Metadata } from "next";
 
 const nunitoSans = localFont({
   src: "../fonts/NunitoSans_10pt-Regular.ttf",
@@ -9,13 +10,20 @@ const nunitoSans = localFont({
 
 });
 
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description: "The modern social media content software",
+};
+
+
 const DashboardLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  return <div className={`${nunitoSans.className} flex items-center justify-center w-screen h-screen gap-[2rem]`}>
-    <Sidebar/>
+  return <div className={nunitoSans.className}>
+  {/* return <div className={`${nunitoSans.className} lg:flex md:flex flex-col items-center justify-center w-screen h-screen gap-[2rem]`}> */}
+
     {children}</div>;
 };
 
