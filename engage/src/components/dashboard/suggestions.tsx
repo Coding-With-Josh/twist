@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 
 export const Suggestions = () => {
   return (
-    <Card>
+    <Card className=''>
       <CardHeader>
         <CardTitle>Suggestions</CardTitle>
       </CardHeader>

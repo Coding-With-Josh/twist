@@ -8,7 +8,7 @@ import { Button } from '../ui/button'
 
 export const MakeAPost = () => {
   return (
-    <div className="min-w-fit flex items-center justify-center gap-2 p-4 border rounded-lg bg-background shadow-md">
+    <div className="w-full flex items-center justify-center gap-2 p-4 border rounded-lg bg-background shadow-md">
       {/* Profile Image */}
       <Image
         src={require("@/assets/images/avatars/4.png")} // Replace with the actual path to the profile image
