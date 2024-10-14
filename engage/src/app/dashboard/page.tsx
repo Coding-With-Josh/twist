@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { Sidebar } from "@/components/dashboard/sidebar";
 import { MakeAPost } from "@/components/dashboard/make_a_post";
@@ -13,9 +15,27 @@ const Page = () => {
         <div className="flex flex-col h-full items-center justify-center gap-4">
 
           <MakeAPost />
-          <Post />
-          <Post />
-          <Post />
+          <Post
+            postImage={require("@/assets/images/pic.png")}
+            profileImage={require("@/assets/images/avatars/7.png")}
+            postText="Hey guyss... Todays my birthday"
+            profileName="Teresa Pere"
+            username="terypp"
+          />
+          <Post
+            postImage={require("@/assets/images/purple.png")}
+            profileImage={require("@/assets/images/avatars/8.png")}
+            postText="Hey guyss... Just finished landing page"
+            profileName="John Doe"
+            username="johnydee"
+          />
+          <Post
+            postImage={require("@/assets/images/h.jpg")}
+            profileImage={require("@/assets/images/avatars/9.png")}
+            postText="Can we duet @johnydee"
+            profileName="Elon Musk"
+            username="ellymusk"
+          />
         </div>
         <Suggestions />
       </div>

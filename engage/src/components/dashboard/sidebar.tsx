@@ -212,8 +212,8 @@ export const Sidebar = ({pathname}: any) => {
       </div>
 
       <div>
-        <aside className="fixed inset-y-0 left-6 hidden md:hidden lg:flex md:w-16 min-w-fit border-r flex-col sm:flex">
-          <nav className="flex flex-col items-start gap-4 py-4 pl-2 pr-[3.2rem] pt-[1.7rem]">
+        <aside className="fixed inset-y-0 left-6 hidden md:hidden lg:flex min-w-fit border-r flex-col sm:flex">
+          <nav className="flex flex-col items-start gap-4 py-4 pl-2 pr-[4rem] pt-[1.7rem] w-full">
             <div className="w-full flex items-center justify-start gap-[1rem]">
               <Link
                 href="/"
